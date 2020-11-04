@@ -1,0 +1,103 @@
+1.React.createElement
+2.JSX <tim hiểu  babel>
+   viết cú pháp giống như bình thường. nhưng nhớ thêm type ="text/babel"
+ 
+3. Các câu lệnh tạo mới react- app
+
+    npx create-react-app my-app
+    cd my-app
+    npm start
+	
+4. Tạo mới component
+file .js
+class ToDoItem extends Component {
+  render(){
+  return thẻ chứa dữ liệu
+  
+  }
+}
+
+5.Props
+  dùng để truyền tải dữ liệu giữa các component cha đến component con
+  + ở conponet cha ta :
+     <ToDoItem title = 'ahi' /> 
+  + ở component con :
+      this.props.title
+	  hoặc const {title} = this.props;
+	  
+6. Render a list
+   khai báo dữ liệu vào chèn nó vào trong constructor.
+   dùng dữ liệu và map nó ra
+    this.listItem.map((item,index) =>  <ToDoItem key = {index} title= {item}/> )
+
+7.React Developer tool
+
+8. Dynamic class name
+  
+
+9.Destructuring
+ 
+10. Conditionnal rendering
+   + có thể dùng if else 
+   + có thể dùng &&
+  
+11. State
+   + Nó giống như kho lưu trữ dữ liệu cho các component trong ReactJS.Nó chủ yếu
+   được sử dụng để cập nhật component khi người dùng thực hiện một số hành động như nhấp vào nút, nhập văn bản, nhấn 1 số phím
+   
+   với state thì ta có thể gán giá trị như sau :
+	 this.state = {"show_technologies": false}
+	 this.setState({"show_technologies": true})
+	lấy giá trị của nó ra bằng cách
+      this.state.show_technologies	
+	  
+	khai báo state ở trong constructor
+	
+	  
+Chú ý: componet chỉ render lại khi props hoặc state thay đổi
+
+12. Immutability <Bất biến>
+
+13. props.children
+   bỏ dữ liệu vào giữa thẻ đóng và thẻ mở của component 
+   bên con thì có thuộc tính children để get ra
+   <Demo header = "hello">
+          hello
+    </Demo>
+		
+    const { header, children } = this.props;
+	
+14. propTypes
+  quy định type của component	
+ 
+15. React.createRef
+   refs được sử dụng để tham chiếu (reference) tới 1 phần tử
+   sử dụng React.createRef để refs , sau đó attach nó vào các phần tử thông  qua thuộc tính ref.
+16. component Lifecycles.
+ + ComponentWillMount đây là method sẽ được thực thi trước khi 1 component được render trên cả server side và client side.
+ + componentDidMount method này được thực thi khi 1 component được render trên client side.Đây là nơi các hàm ajax requests,DOM or update state được thực thi.
+ Method này cũng được sử dụng để kết nối với các js Framework khác và funtion với deplayed execution như settimeout hoặc setInterval
+ + componentWillReceiveProps sẽ được thực thi ngay khi thuộc tính props được update  và trước khi componet được render lại.
+ + shouldComponentUpdate sẽ trả về kết quả true hoặc false. Phương thức này sẽ xác định xem 1 component có được render lại hay không. mặc định 
+  giá trị của nó sẽ là true.Nếu không muốn render lại component khi componet cha render lại thì ta đặt nó là false.
+ + componentWillUpdate được gọi khi chúng ta update state của compinent trước khi nó render lại .
+ + componentDidUpdate sau khi componentWillUpdate ở trên được gọi  htif đên lượt nó được gọi.
+ + componentWillUnmount được gọi khi chúng ta unmount 1 component kiểu như xóa nó khỏi react.
+
+17. Storybook
+18. Functional Stateless Component 
+   Nó là functional .Nó khác vs class là không có lificycle và không có contructor, nó có thể
+    nhận dữ liệu vào là props ....
+19. Router
+30. Render Props
+    khi props nhận dữ liệu đầu vào là 1 function
+	mục đích là khả năng tái sử dụng lại  state và methods của 1 component trên component khách cần sử dụng state.
+31. Context API
+   cung cấp cho bạn cách để truyền dữ liệu xuống cây component mà không cần phải truyền props xuống ở tất cả các cấp component
+   
+	
+		
+   
+	  
+ 
+

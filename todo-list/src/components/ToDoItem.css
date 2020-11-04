@@ -1,0 +1,18 @@
+.ToDoItem {
+    color: black;
+    font-weight: 300;
+    font-size: 24px;
+    border-bottom: 1px solid springgreen;
+    display: flex;
+}
+.ToDoITem_Compeleted {
+    text-decoration: line-through;
+    opacity: 0.3;
+}
+p {
+    margin-left: 30px;
+}
+.ToDoItem :last-child {
+    /* color: red; */   
+    border-bottom: none !important;
+  }
